@@ -19,6 +19,7 @@ from pathlib import Path
 # Ensure project root is on the path when running as a script
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
+import pandas as pd
 import torch
 
 from configs.config import (
@@ -53,7 +54,7 @@ def main() -> None:
     )
 
     # ── Visualise data ────────────────────────────────────────────────────────
-    plot_distribution(train_df.append(val_df).append(test_df),
+    plot_distribution(pd.concat([train_df, val_df, test_df], ignore_index=True),
                       save_path=OUTPUT_DIR / 'distribution_charts.png')
     plot_sample_grid(train_df,
                      save_path=OUTPUT_DIR / 'sample_grid.png')
