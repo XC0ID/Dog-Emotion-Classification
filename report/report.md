@@ -92,7 +92,7 @@ The following visualizations were generated:
 
 ### Model Comparison:
 
-| Metric        | MobileNetV2 | EfficientNetB0 |
+| Metric       | MobileNetV2| EfficientNetB0|
 |--------------|------------|---------------|
 | Accuracy     | Moderate   | Higher        |
 | Speed        | Faster     | Slower        |
